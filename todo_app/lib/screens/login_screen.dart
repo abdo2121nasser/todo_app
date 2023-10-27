@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:work_shop1/core/block/general_text_field_block.dart';
 import 'package:work_shop1/core/constants/color_constants.dart';
-import 'package:work_shop1/core/constants/constants.dart';
+import 'package:work_shop1/core/constants/constants_images.dart';
 import 'package:work_shop1/screens/register_screen.dart';
 
 import '../core/block/general_button_block.dart';
@@ -26,8 +26,8 @@ class LoginScreen extends StatelessWidget {
               ),
               const Text('Login',
               style: TextStyle(color: Colors.black87,fontSize: 30,fontWeight: FontWeight.bold),),
-              GeneralTextField(hint: 'Email',),
-              GeneralTextField(hint: 'Password',),
+              GeneralTextField(hint: 'Email',icon: Icons.email_outlined,),
+              GeneralTextField(hint: 'Password',icon: Icons.password,),
              const SizedBox(height: 20,),
                Row(
                 children: [

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 class GeneralTextField extends StatelessWidget {
   final String hint;
-
-  GeneralTextField({required this.hint});
+  final IconData icon;
+  GeneralTextField({required this.hint, required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,8 @@ class GeneralTextField extends StatelessWidget {
           vertical: 10
       ),
       child: TextFormField(
-        ////controller: textEditingController,
-        //cursorColor: AppColors.kMainColor,
+        //keyboardType: TextInputType.none,
+
         decoration:  InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -23,6 +23,7 @@ class GeneralTextField extends StatelessWidget {
               BorderSide(width: 1.7,color: Colors.grey.shade600)),
           border:const  OutlineInputBorder(),
           hintText: hint,
+           prefixIcon: Icon(icon),
           hintStyle:const TextStyle(color: Colors.black87,fontSize: 20)
         ),
       ),
